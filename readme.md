@@ -10,7 +10,7 @@ Api Laravel para agregar empleados
 
 uri api/empleados
 
-##Parametros
+## Parametros
 
 
 
