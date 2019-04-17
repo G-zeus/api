@@ -11,9 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-
-    dd(request());
-    return view('welcome');
-});
 
