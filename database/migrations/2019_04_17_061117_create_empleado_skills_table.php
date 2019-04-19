@@ -15,10 +15,10 @@ class CreateEmpleadoSkillsTable extends Migration
     {
         Schema::create('empleados_skills', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('empleado_id');
-//            $table->foreign('empleado_id')->references('id')->on('empleados');
-            $table->integer('skill_id');
-//            $table->foreign('skill_id')->references('id')->on('skills');
+            $table->integer('empleado_id')->unsigned();
+            $table->foreign('empleado_id')->references('id')->on('empleados');
+            $table->integer('skill_id')->unsigned();
+            $table->foreign('skill_id')->references('id')->on('skills');
             $table->tinyInteger('calificacion');
             $table->timestamps();
 

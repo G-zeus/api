@@ -22,7 +22,6 @@ class CreateEmpleadosTable extends Migration
             $table->enum('puesto', array('SOLDADO', 'SARGENTO', 'TENIENTE', 'CAPITAN'));
             $table->date('nacimiento');
             $table->text('domicilio');
-//            $table->text();
             $table->timestamps();
         });
     }
