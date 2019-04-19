@@ -8,6 +8,7 @@ use Carbon\Carbon;
 class Empleados extends Model
 {
 
+
     protected $fillable = [
         "primer_apellido",
         "nombre",
@@ -53,6 +54,13 @@ class Empleados extends Model
     public function setDomicilioAttribute($value){
 
         $this->attributes['domicilio'] = strtoupper($value);
+
+    }
+
+
+    public function getNacimientoAttribute($value)
+    {
+        return $this->attributes['nacimiento'] = (new Carbon($value))->format('d/m/Y');
 
     }
 

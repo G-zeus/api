@@ -18,4 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::apiresource('empleados', 'EmpleadosController');
+Route::apiresource('empleados', 'MainController');
