@@ -13,6 +13,8 @@ class MainController extends Controller
 {
     function index(Request $request, Empleados $empleados)
     {
+        /**TODO: Regresar skills y su calificacion**/
+
         if (!$request->isJson())
             return response()->json(['error' => 'Unautorized'], 401);
 
@@ -51,6 +53,7 @@ class MainController extends Controller
 
     function show(Empleados $empleados, Request $request, $empleado)
     {
+        /**TODO: Regresar skills y su calificacion**/
 
         if (!$request->isJson())
             return response()->json(['error' => 'Unautorized'], 401);
@@ -103,4 +106,7 @@ class MainController extends Controller
         return false;
 
     }
+    /**
+     * Todo : Implementar integracion con google maps api
+     */
 }
